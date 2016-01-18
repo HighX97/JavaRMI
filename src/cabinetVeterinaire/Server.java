@@ -1,14 +1,15 @@
-package helloWorld;
-import java.rmi.registry.Registry;
+package cabinetVeterinaire;
+
 import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 public class Server {
 
 	public Server(){}
 	
-	public static void main(String args[]){
+	public static void main(String args[]){ 
 		try {
-			HelloImpl obj = new HelloImpl();
+			Animal obj = new Animal();
 			Registry registry = LocateRegistry.createRegistry(1099);
 			//Registry registry = LocateRegistry.getRegistry();
 			if (registry==null){
@@ -16,8 +17,8 @@ public class Server {
 			}
 			else
 			{
-				registry.bind("Hello", obj);
-				System.err.println("Server ready");
+				registry.bind("IAnimal", obj);
+				System.err.println("Server animal ready");
 			}
 		} catch (Exception e)
 		{
@@ -26,3 +27,4 @@ public class Server {
 		}
 	}
 }
+
