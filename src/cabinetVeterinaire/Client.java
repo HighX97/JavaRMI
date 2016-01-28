@@ -7,6 +7,10 @@ import java.rmi.registry.Registry;
 public class Client {
 	
 	public Client(){}
+
+//		System.out.println("Manager : "+System.getProperty("java.security.policy"));
+//		System.out.println(System.setProperty("java.security.policy", "/auto_home/lortole/git/JavaRMI/bin/cabinetVeterinaire/cabinetVeterinaire.pol"));
+//		System.out.println("Manager : "+System.getProperty("java.security.policy"));
 	
 	public static void main(String args[]){
 		String host = (args.length < 1) ? null : args[0];
