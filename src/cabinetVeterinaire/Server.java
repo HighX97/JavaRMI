@@ -11,7 +11,7 @@ public class Server {
 	
 	public static void main(String args[]){
 		
-		System.setProperty( "java.security.policy", "cabinetVeterinaire.policy");
+		//System.setProperty( "java.security.policy", "cabinetVeterinaire.policy");
 		try {
 			if (System.getSecurityManager() == null)
 			{
